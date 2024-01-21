@@ -1,0 +1,171 @@
+// Write a c program to sum two number using modular approach
+// Without return type without parameter
+// #include<stdio.h>
+// void sum(void);
+// int main(){
+//     sum();
+// }
+// void sum(void){
+//     int a,b;
+//     printf("Enter two number:");
+//     scanf("%d %d",&a,&b);
+//     printf("Sum is: %d",a+b);
+// }
+
+// Without return type with parameter
+// #include<stdio.h>
+// void sum(int,int);
+// int main(){
+//     int a,b;
+//     printf("Enter two number:");
+//     scanf("%d %d",&a,&b);
+//     sum(a,b);
+// }
+// void sum(int k,int m){
+//     int s;
+//     s=k+m;
+//     printf("Sum is: %d",s);
+// }
+
+// With return type without parameter
+// #include<stdio.h>
+// int sum();
+// int main(){
+//     int s,c;
+//   c=sum();
+//   printf("sum is:%d",c);
+// }
+// int sum(){
+//      int a,b,s;
+//     printf("Enter two number:");
+//     scanf("%d %d",&a,&b);
+//     s=a+b;
+//     return s;
+// }
+
+//With return type with parameter
+// #include<stdio.h>
+// int sum(int,int);
+// int main(){
+//     int a,b,z;
+//     printf("Enter two number:");
+//     scanf("%d %d",&a,&b);
+//   z= sum(a,b);
+//   printf("sum is:%d",z);
+// }
+// int sum(int k,int m){
+//     int s;
+//     s=k+m;
+//     return s;
+// }
+
+// #include<stdio.h>
+// void task(int);
+// int main(){
+//     int n;
+//     printf("Enter the number:");
+//     scanf("%d",&n);
+//     task(n);
+// }
+// void task(int a){
+//     if(a%2==0){
+//         printf("Even number");
+//         int i=1,sum=0;
+//         while(i<=a){
+//         sum=sum+i;
+//         i++;
+//     }
+//     printf("sum is %d",sum);
+//     }
+//     else{
+//         printf("Odd Number\n");
+//         int rem,rev=0;
+//         while(a>0){
+//             rem=a%10;
+//             rev=(rev*10)+rem;
+//             a=a/10;
+//         }
+//         printf("Reverse of number is:%d",rev);
+//     }
+// }
+
+// Swapping two number usin call by reference without Return type  with parameter
+// #include <stdio.h>
+// void swap (int *, int *);
+// int main()
+// {
+//     int a, b;
+//     printf("\nEnter value of a & b: ");
+//     scanf("%d %d", &a, &b);
+//     printf("\nBefore Swapping:\n");
+//     printf("\na = %d\n\nb = %d\n", a, b);
+//     swap(&a, &b);
+//     printf("\nAfter Swapping:\n");
+//     printf("\na = %d\n\nb = %d", a, b);
+//     return 0;
+// }
+// swap (int *x, int *y)
+// {
+//     int temp;
+//     temp = *x;
+//     *x = *y;
+//     *y = temp;
+// }
+
+// #include<stdio.h>
+// int fibo(void);
+// int main(){
+//     int f;
+//     f=fibo();
+//     printf("sum is:%d",f);
+// }
+// int fibo (){
+//     int n;
+//     printf("Enter the number:");
+//     scanf("%d",&n);
+//     if (n <= 0)
+//       return 0;
+       
+//     int fibo[n+1];
+//     fibo[0] = 0, fibo[1] = 1;
+ 
+//     // Initialize result
+//     int sum = fibo[0] + fibo[1];
+//     // Add remaining terms
+//     for (int i=2; i<=n; i++)
+//     {
+//         fibo[i] = fibo[i-1]+fibo[i-2];
+//         sum += fibo[i];
+//     }
+//     return sum;
+// }
+
+// #include<stdio.h>
+// int main(){
+//     int n;
+//     printf("Enter the number:");
+//     scanf("%d",&n);
+//     int fact=1;
+//     for(int i=1;i<=n;i++){
+//         fact=fact*i;
+//     }
+//     printf("The factorial pf given number is:%d",fact);
+// }
+  
+  // Write a program to sum of two number using call by refernece
+  #include<stdio.h>
+  int sum(int*,int*);
+  int main(){
+      int a,b,s;
+      printf("Enter the value of a:");
+      scanf("%d",&a);
+      printf("Enter the value of b:");
+      scanf("%d",&b);
+      s=sum(&a,&b);
+      printf("The sum of given numbers is:%d",s);
+  }
+  int sum(int* k,int* m){
+      int t;
+      t=(*k)+(*m);
+      return t;
+  }
