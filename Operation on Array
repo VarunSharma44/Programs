@@ -1,0 +1,190 @@
+ #include<stdio.h>
+// int main(){
+//     int a[50],size,i,num,pos;
+//     printf("Enter the size of array:");
+//     scanf("%d",&size);
+//     printf("Enter the elemrntf of array:");
+//     for(i=0;i<size;i++){
+//         scanf("%d",&a[i]);
+//     }
+//     printf("Enter the data you want to insert:");
+//     scanf("%d",&num);
+//     printf("Enter position:");
+//     scanf("%d",&pos);
+//     for(i=size-1;i>=pos-1;i--){
+//         a[i+1]=a[i];
+//     }
+//     a[pos-1]=num;
+//     size++;
+//     if(pos<=0||pos>size+1)
+//     {
+//         printf("Invalid Position!");
+//     }
+//     else{
+//     printf("Elements of the array are:");
+//     for(i=0;i<size;i++){
+//         printf("%d\t",a[i]);
+//     }
+//     }
+// }
+// when we want to insert the value at first position Zeroth index....
+//  for(i=size-1;i>=0;i--){
+//         a[i+1]=a[i];
+//     }
+//     a[0]=num;
+//     size++;
+    // if(pos<=0||pos>size+1)
+    // {
+    //     printf("Invalid Position!");
+    // }
+    // else{
+    // printf("Elements of the array are:");
+    // for(i=0;i<size;i++){
+    //     printf("%d\t",a[i]);
+    // }
+    // }
+    
+    // #include<stdio.h>
+    // int main(){
+    //     int a[50],size,i,pos;
+    //     printf("Enter the size of array:");
+    //     scanf("%d",&size);
+    //     printf("Enter the element of array");
+    //     for(i=0;i<=size;i++){
+    //         scanf("%d",&a[i]);
+    //     }
+    //     printf("From what position you want to delete");
+    //     scanf("%d",&pos);
+    //     for(i=pos-1;i>=size-1;i--){
+    //         a[i-1]=a[i];
+    //     }
+    //     size--;
+    //       printf("Elements of the array are:");
+    //        for(i=0;i<size;i++){
+    //        printf("%d\t",a[i]);
+    // }
+    // }
+    
+    
+   //  #include<stdio.h>
+   //  int main(){
+   //  int a[50],size,i,num,pos,count=0;
+   //  printf("Enter the size of array:");
+   //  scanf("%d",&size);
+   //  printf("Enter the element of array:");
+   //  for(i=0;i<size;i++){
+   //      scanf("%d",&a[i]);
+   //  }
+   //  printf("Enter the data you want to insert:");
+   //  scanf("%d",&num);
+   //  printf("Enter position:");
+   //  scanf("%d",&pos);
+   // int p=a[pos-1];
+   //   for(i=size-1;i>=pos-1;i--){
+   //    a[i+1]=a[i];
+   //   }
+   //   for(int i=1;i<=p;i++){
+   //      if(p%i==0){
+   //          count++;
+   //      }
+   //    if(count==2)
+   //     a[pos-1]=num;
+  
+   //  }
+   //   printf("Elements of the array are:");
+   //         for(i=0;i<=size;i++){
+   //         printf("%d\t",a[i]);
+   //  }
+   //  }
+    
+   // Ques-WAP to read an array of 10 elements and display the same
+   // #include<stdio.h>
+   // int main(){
+   //  int a[10];
+   //  printf("Input 10 elements\n");
+   //  for(int i=0;i<10;i++){
+   //   scanf("%d",&a[i]);
+   //  }
+   //  for(int i=0;i<10;i++){
+   //   printf("%d",a[i]);
+   //  }
+   // }
+    
+    // Ques-WAP in C read an array (1D,2D,3D) from user and search a no if no is get then that number is updated
+    // #include<stdio.h>
+    // int main(){
+    //  int a[5]={1,2,3,4,5};
+    //  int search,update;
+    //  printf("Enter search number :");
+    //  scanf("%d",&search);
+    //  printf("Enter update number is:");
+    //  scanf("%d",&update);
+    //  for(int i=0;i<=4;i++){
+    //   if(a[i]==search){
+    //    a[i]=update;
+    //    printf("Updating array is:");
+    //    for(int i=0;i<=4;i++)
+    //    {
+    //     printf("%d",a[i]);
+    //    }
+    //   }
+    //  }
+    // }
+    
+  // ******* // Ques- WAP in C to search a prime number with in 3*3 Matrix and replace it with 100
+    
+    
+    // #include<stdio.h>
+    // int main(){
+    //  int a[3][3]={2,4,6,5,8,9,44,12,16};
+    //  int count=0,c;
+    
+    // for(int i=0;i<3;i++){
+    //  for(int j=0;j<3;j++){
+    //   c=a[i][j];
+    //   for(i=1;i<=c;i++){
+    //    if(c%i==0)
+    //    count++;
+    //   }
+    //   if(count==2){
+    //    c=100;
+    //   }
+    //  }
+    // }
+    // for(int i=0;i<3;i++){
+    //  for(int j=0;j<3;j++){
+    //   printf("%d",c);
+    //  }
+    // }
+    // }
+    
+    
+****    #include<stdio.h>
+    void main(){
+     int arr[2][2][2]={{1,2},{3,4},{153,5},{6,8}};
+     for(int i=0;i<2;i++){
+      for(int j=0;j<2;j++){
+       for(int k=0;k<2;k++){
+        if (arm(arr[i][j][k]))
+        {
+         arr[i][j][k]=121;
+        }
+       }
+      }
+     }
+    }
+    
+    int arm(int n){
+     int c,c=n;
+     int arm=0,rem;
+     while(n>0){
+      rem=n%10;
+      arm=arm+(rem*rem*rem);
+      n=n/10;
+     }
+     if(n==1) 
+     return 1;
+     else
+     return 0;
+     }
+    
