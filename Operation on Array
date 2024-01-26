@@ -187,4 +187,28 @@
      else
      return 0;
      }
+
+
+//ques- Reversal of the array
+
+#include<stdio.h>
+int main(){
+     int a[4];
+    printf("Enter the elements of array:");
+     for(int i=0;i<=3;i++){
+    scanf("%d",&a[i]);
+     }
+     int i=0,j=3,t;
+     while(i<=j){
+         t=a[i];
+         a[i]=a[j];
+         a[j]=t;
+         i++,j--;
+     }
+     printf("Updated array:");
+     for(int i=0;i<=3;i++){
+         printf("%d",a[i]);
+     }
+     }
+
     
